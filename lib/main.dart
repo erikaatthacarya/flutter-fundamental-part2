@@ -5,9 +5,9 @@ void main() => runApp(const MyApp());
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // Widget titleSection (dimasukkan ke dalam class biar lebih terstruktur)
+  // Widget titleSection
   Widget get titleSection => Container(
-        padding: const EdgeInsets.all(32),
+        padding: const EdgeInsets.all(32), // padding luar 32
         child: Row(
           children: [
             Expanded(
@@ -22,13 +22,14 @@ class MyApp extends StatelessWidget {
                       'Wisata Gunung di Batu',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
+                        fontSize: 16,
                       ),
                     ),
                   ),
                   const Text(
                     'Batu, Malang, Indonesia',
                     style: TextStyle(
-                      color: Colors.grey,
+                      color: Colors.grey, // warna abu-abu
                     ),
                   ),
                 ],
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
               Icons.star,
               color: Colors.red,
             ),
+            const SizedBox(width: 4), // jarak sedikit sebelum angka
             const Text('41'),
           ],
         ),
@@ -54,7 +56,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: [
-            titleSection, 
+            titleSection, // tampilkan titleSection di body
           ],
         ),
       ),
