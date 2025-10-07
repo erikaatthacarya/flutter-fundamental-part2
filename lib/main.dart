@@ -7,15 +7,13 @@ class MyApp extends StatelessWidget {
 
   // Widget titleSection
   Widget get titleSection => Container(
-        padding: const EdgeInsets.all(32), // padding luar 32
+        padding: const EdgeInsets.all(32),
         child: Row(
           children: [
             Expanded(
-              // soal 1: Column di dalam Expanded
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // soal 2: teks judul dengan padding bawah 8
                   Container(
                     padding: const EdgeInsets.only(bottom: 8),
                     child: const Text(
@@ -29,22 +27,43 @@ class MyApp extends StatelessWidget {
                   const Text(
                     'Batu, Malang, Indonesia',
                     style: TextStyle(
-                      color: Colors.grey, // warna abu-abu
+                      color: Colors.grey,
                     ),
                   ),
                 ],
               ),
             ),
-            // soal 3: ikon bintang merah + angka 41
             const Icon(
               Icons.star,
               color: Colors.red,
             ),
-            const SizedBox(width: 4), // jarak sedikit sebelum angka
+            const SizedBox(width: 4),
             const Text('41'),
           ],
         ),
       );
+
+  // Langkah 1: Buat method _buildButtonColumn
+  Column _buildButtonColumn(Color color, IconData icon, String label) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(icon, color: color),
+        Container(
+          margin: const EdgeInsets.only(top: 8),
+          child: Text(
+            label,
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
+              color: color,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +75,8 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: [
-            titleSection, // tampilkan titleSection di body
+            titleSection,
+            // 👆 Baru sampai titleSection, _buildButtonColumn belum dipakai
           ],
         ),
       ),
