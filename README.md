@@ -1,4 +1,4 @@
 # Hasil Screenshot
 
 Berikut adalah hasil tampilan aplikasi Flutter setelah Implementasi title row
-![Hasil Screenshot](foto5.png)
+![Hasil Screenshot](foto6.png)
