@@ -78,6 +78,18 @@ class MyApp extends StatelessWidget {
         _buildButtonColumn(color, Icons.share, 'SHARE'),
       ],
     );
+      //Langkah 1 praktikum 3: Buat widget textSection
+      Widget textSection = Container(
+      padding: const EdgeInsets.all(32),
+      child: const Text(
+        'Gunung Bromo merupakan salah satu gunung berapi aktif yang terletak di Provinsi Jawa Timur, Indonesia.' 
+        'Gunung ini berada di kawasan Taman Nasional Bromo Tengger Semeru dan memiliki ketinggian sekitar 2.329 meter di atas permukaan laut.' 
+        'Dikenal dengan pemandangan matahari terbitnya yang menakjubkan, '
+        'Gunung Bromo menjadi salah satu destinasi wisata paling populer di Indonesia.'
+        'Erika Atthacarya Putri Cahyani NIM: 2341760158',
+        softWrap: true,
+      ),
+    );
 
     return MaterialApp(
       title: 'Flutter layout: Erika Atthacarya 2341760158',
@@ -87,8 +99,9 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: [
-            titleSection,  // tampilkan titleSection di body
-            buttonSection, // tampilkan buttonSection di bawah title
+            titleSection,  // tampilkan Wisata Gunung Batu
+            buttonSection, // tampilkan CALL,ROUTE,SHARE
+            textSection, // tampilkan paragraf tugas praktikum
           ],
         ),
       ),
